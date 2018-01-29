@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="579.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlateauViewController">
+   <children>
+      <Circle fill="#1b1b1a" layoutX="470.0" layoutY="394.0" radius="284.0" stroke="BLACK" strokeType="INSIDE" />
+      <AnchorPane layoutX="270.0" layoutY="193.0" prefHeight="403.0" prefWidth="401.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fa7f20b5" height="200.0" layoutY="2.0" strokeType="INSIDE" width="200.0">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.49999999999999994" cycleMethod="REPEAT" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fa7f20b5" height="200.0" layoutX="200.0" layoutY="2.0" strokeType="INSIDE" width="200.0">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.49999999999999994" cycleMethod="REPEAT" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fa7f20b5" height="200.0" layoutY="202.0" strokeType="INSIDE" width="200.0">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.49999999999999994" cycleMethod="REPEAT" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fa7f20b5" height="200.0" layoutX="200.0" layoutY="202.0" strokeType="INSIDE" width="200.0">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.49999999999999994" cycleMethod="REPEAT" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+            </Rectangle>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="7.0" layoutY="2.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label text="Manche" />
+            <Label layoutX="-1.0" layoutY="28.0" text="Score" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="BTMenu" blendMode="EXCLUSION" layoutX="795.0" layoutY="626.0" mnemonicParsing="false" text="Retour menu" />
+   </children>
+</AnchorPane>
