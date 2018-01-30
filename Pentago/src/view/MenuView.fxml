@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -7,11 +11,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="545.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="903.0" style="-fx-background-color: #555; -fx-border-color: #333; -fx-border-insets: 51px; -fx-border-radius: 10px; -fx-border-width: 10px;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuViewController">
    <children>
-      <BorderPane layoutX="130.0" layoutY="4.0" prefHeight="545.0" prefWidth="614.0">
-         <center>
-            <GridPane prefHeight="545.0" prefWidth="614.0" BorderPane.alignment="CENTER">
+      <BorderPane layoutY="91.0" prefHeight="458.0" prefWidth="888.0">
+         <right>
+            <GridPane prefHeight="458.0" prefWidth="903.0" style="-fx-background-color: #BDBDBD; -fx-border-radius: 10px;" translateY="40.0" BorderPane.alignment="CENTER">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
@@ -20,11 +24,11 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                  <AnchorPane prefHeight="136.0" prefWidth="855.0" style="-fx-effect: dropshadow( one-pass-box, black ,6, 0.25, 1 , 2 );">
                      <children>
-                        <Label layoutX="114.0" layoutY="128.0" prefHeight="17.0" prefWidth="375.0" text="Bienvenue dans le Pentago Ynov !" textAlignment="CENTER">
+                        <Label layoutX="205.0" layoutY="202.0" prefHeight="41.0" prefWidth="476.0" text="Bienvenue dans le Pentago" textAlignment="CENTER">
                            <font>
-                              <Font size="24.0" />
+                              <Font name="Onomber" size="38.0" />
                            </font>
                            <textFill>
                               <RadialGradient centerX="0.4" centerY="0.5095238095238095" focusDistance="0.5813953488372094" radius="1.0">
@@ -34,19 +38,38 @@
                                  </stops>
                               </RadialGradient>
                            </textFill>
+                           <effect>
+                              <Reflection fraction="0.6" topOffset="-10.0" topOpacity="0.45" />
+                           </effect>
                         </Label>
+                        <ImageView cacheHint="SPEED" fitHeight="151.0" fitWidth="153.0" layoutX="368.0" layoutY="33.0" preserveRatio="true">
+                           <image>
+                              <Image url="@../../logo.png" />
+                           </image>
+                           <effect>
+                              <Reflection fraction="0.22" topOpacity="0.35" />
+                           </effect>
+                        </ImageView>
                      </children>
+                     <effect>
+                        <GaussianBlur />
+                     </effect>
                   </AnchorPane>
-                  <AnchorPane blendMode="EXCLUSION" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                  <AnchorPane blendMode="EXCLUSION" prefHeight="246.0" prefWidth="903.0" snapToPixel="false" style="-fx-background-color: #BDBDBD;" GridPane.rowIndex="1">
                      <children>
-                        <Button fx:id="BT1" layoutX="281.0" layoutY="60.0" mnemonicParsing="false" text="1 VS 1" />
-                        <Button fx:id="Regle" layoutX="283.0" layoutY="124.0" mnemonicParsing="false" text="Régle" />
-                        <Button fx:id="About" layoutX="282.0" layoutY="177.0" mnemonicParsing="false" text="About" />
+                        <Button fx:id="BT1" layoutX="391.0" layoutY="60.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="104.0" style="-fx-background-color: #FFF; -fx-background-radius: 10px; -fx-effect: dropshadow( three-pass-box, grey,15, 0.55, 0 , 0 );" text="1 VS 1">
+                           <font>
+                              <Font name="Onomber" size="26.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="Regle" blendMode="SRC_ATOP" layoutX="390.0" layoutY="167.0" mnemonicParsing="false" pickOnBounds="false" style="-fx-effect: dropshadow( one-pass-box, grey,6, 0.25, 1 , 2 );" text="Régle" textAlignment="CENTER" />
+                        <Button fx:id="About" layoutX="443.0" layoutY="167.0" mnemonicParsing="false" style="-fx-effect: dropshadow( one-pass-box, grey,6, 0.25, -1 , 2 );" text="About" />
                      </children>
                   </AnchorPane>
                </children>
             </GridPane>
-         </center>
+         </right>
       </BorderPane>
+      <Label layoutX="300.0" layoutY="630.0" prefHeight="87.0" prefWidth="250.0" text="Label" />
    </children>
 </AnchorPane>

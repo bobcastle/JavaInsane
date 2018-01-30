@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -7,12 +11,13 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="579.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlateauViewController">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="724.0" prefWidth="918.0" style="-fx-background-color: #444;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlateauViewController">
    <children>
-      <Circle fill="#1b1b1a" layoutX="470.0" layoutY="394.0" radius="284.0" stroke="BLACK" strokeType="INSIDE" />
-      <AnchorPane layoutX="270.0" layoutY="193.0" prefHeight="403.0" prefWidth="401.0">
+      <Button fx:id="BTMenu" alignment="BOTTOM_RIGHT" blendMode="EXCLUSION" contentDisplay="RIGHT" layoutX="778.0" layoutY="655.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="128.0" style="-fx-effect: dropshadow( three-pass-box, black,15, 0.20, 0 , 0 ); -fx-background-color: #444;" text="MENU" textFill="WHITE" />
+      <Circle fill="#1b1b1a" layoutX="458.0" layoutY="372.0" radius="283.0" stroke="BLACK" strokeType="INSIDE" style="-fx-effect: dropshadow( three-pass-box, black,15, 0.20, 0 , 0 );" />
+      <AnchorPane layoutX="259.0" layoutY="170.0" prefHeight="403.0" prefWidth="401.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fa7f20b5" height="200.0" layoutY="2.0" strokeType="INSIDE" width="200.0">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fa7f20b5" focusTraversable="true" height="200.0" layoutY="2.0" strokeType="INSIDE" width="200.0">
                <stroke>
                   <RadialGradient centerX="0.5" centerY="0.49999999999999994" cycleMethod="REPEAT" radius="0.5">
                      <stops>
@@ -21,8 +26,15 @@
                      </stops>
                   </RadialGradient>
                </stroke>
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:/C:/Users/Draden/Documents/GitHub/JavaInsane/Pentago/wood.jpg" />
+                     </source>
+                  </ImageInput>
+               </effect>
             </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fa7f20b5" height="200.0" layoutX="200.0" layoutY="2.0" strokeType="INSIDE" width="200.0">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fa7f20b5" height="200.0" layoutX="201.0" layoutY="2.0" strokeType="INSIDE" width="200.0">
                <stroke>
                   <RadialGradient centerX="0.5" centerY="0.49999999999999994" cycleMethod="REPEAT" radius="0.5">
                      <stops>
@@ -31,6 +43,13 @@
                      </stops>
                   </RadialGradient>
                </stroke>
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:/C:/Users/Draden/Documents/GitHub/JavaInsane/Pentago/wood.jpg" />
+                     </source>
+                  </ImageInput>
+               </effect>
             </Rectangle>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fa7f20b5" height="200.0" layoutY="202.0" strokeType="INSIDE" width="200.0">
                <stroke>
@@ -41,6 +60,13 @@
                      </stops>
                   </RadialGradient>
                </stroke>
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:/C:/Users/Draden/Documents/GitHub/JavaInsane/Pentago/wood.jpg" />
+                     </source>
+                  </ImageInput>
+               </effect>
             </Rectangle>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fa7f20b5" height="200.0" layoutX="200.0" layoutY="202.0" strokeType="INSIDE" width="200.0">
                <stroke>
@@ -51,15 +77,33 @@
                      </stops>
                   </RadialGradient>
                </stroke>
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:/C:/Users/Draden/Documents/GitHub/JavaInsane/Pentago/wood.jpg" />
+                     </source>
+                  </ImageInput>
+               </effect>
             </Rectangle>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="7.0" layoutY="2.0" prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane layoutX="7.0" layoutY="2.0" prefHeight="96.0" prefWidth="216.0">
          <children>
-            <Label text="Manche" />
-            <Label layoutX="-1.0" layoutY="28.0" text="Score" />
+            <Pane layoutY="7.0" prefHeight="80.0" prefWidth="224.0" style="-fx-background-color: #333; -fx-background-radius: 15px; -fx-effect: dropshadow( three-pass-box, black,15, 0.20, 0 , 0 );">
+               <children>
+                  <Label layoutX="20.0" layoutY="33.0" prefHeight="43.0" prefWidth="85.0" text="Score" textFill="#dddddd">
+                     <font>
+                        <Font name="Onomber" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="1.0" prefHeight="37.0" prefWidth="96.0" text="Manche" textFill="#dddddd">
+                     <font>
+                        <Font name="Onomber" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
          </children>
       </AnchorPane>
-      <Button fx:id="BTMenu" blendMode="EXCLUSION" layoutX="795.0" layoutY="626.0" mnemonicParsing="false" text="Retour menu" />
    </children>
 </AnchorPane>
