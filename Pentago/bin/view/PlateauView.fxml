@@ -11,9 +11,14 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="724.0" prefWidth="918.0" style="-fx-background-color: #444;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlateauViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="918.0" scaleShape="false" style="-fx-background-color: #444;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlateauViewController">
    <children>
-      <Button fx:id="BTMenu" alignment="BOTTOM_RIGHT" blendMode="EXCLUSION" contentDisplay="RIGHT" layoutX="778.0" layoutY="655.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="128.0" style="-fx-effect: dropshadow( three-pass-box, black,15, 0.20, 0 , 0 ); -fx-background-color: #444;" text="MENU" textFill="WHITE" />
+      <Pane layoutX="-1.0" layoutY="1.0" prefHeight="724.0" prefWidth="918.0">
+         <effect>
+            <ImageInput />
+         </effect>
+      </Pane>
+      <Button fx:id="BTMenu" alignment="BOTTOM_RIGHT" blendMode="EXCLUSION" contentDisplay="RIGHT" layoutX="741.0" layoutY="648.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="128.0" style="-fx-effect: dropshadow( three-pass-box, black,15, 0.20, 0 , 0 ); -fx-background-color: #444;" text="MENU" textFill="WHITE" />
       <Circle fill="#1b1b1a" layoutX="458.0" layoutY="372.0" radius="283.0" stroke="BLACK" strokeType="INSIDE" style="-fx-effect: dropshadow( three-pass-box, black,15, 0.20, 0 , 0 );" />
       <AnchorPane layoutX="259.0" layoutY="170.0" prefHeight="403.0" prefWidth="401.0">
          <children>
@@ -89,7 +94,7 @@
       </AnchorPane>
       <AnchorPane layoutX="7.0" layoutY="2.0" prefHeight="96.0" prefWidth="216.0">
          <children>
-            <Pane layoutY="7.0" prefHeight="80.0" prefWidth="224.0" style="-fx-background-color: #333; -fx-background-radius: 15px; -fx-effect: dropshadow( three-pass-box, black,15, 0.20, 0 , 0 );">
+            <Pane layoutX="14.0" layoutY="16.0" prefHeight="80.0" prefWidth="228.0" style="-fx-background-color: #333; -fx-background-radius: 15px; -fx-effect: dropshadow( three-pass-box, black,15, 0.20, 0 , 0 );">
                <children>
                   <Label layoutX="20.0" layoutY="33.0" prefHeight="43.0" prefWidth="85.0" text="Score" textFill="#dddddd">
                      <font>
