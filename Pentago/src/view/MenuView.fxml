@@ -26,7 +26,7 @@
                <children>
                   <AnchorPane prefHeight="136.0" prefWidth="855.0" style="-fx-effect: dropshadow( one-pass-box, black ,6, 0.25, 1 , 2 );">
                      <children>
-                        <Label layoutX="205.0" layoutY="202.0" prefHeight="41.0" prefWidth="476.0" text="Bienvenue dans le Pentago" textAlignment="CENTER">
+                        <Label layoutX="205.0" layoutY="202.0" prefHeight="41.0" prefWidth="476.0" text="Bienvenue dans le Pentago" textAlignment="CENTER" translateY="-10.0">
                            <font>
                               <Font name="Onomber" size="38.0" />
                            </font>
