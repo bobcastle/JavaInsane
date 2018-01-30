@@ -29,7 +29,7 @@
                <effect>
                   <ImageInput>
                      <source>
-                        <Image url="file:/C:/Users/Draden/Documents/GitHub/JavaInsane/Pentago/wood.jpg" />
+                        <Image url="file:wood.jpg" />
                      </source>
                   </ImageInput>
                </effect>
@@ -46,7 +46,7 @@
                <effect>
                   <ImageInput>
                      <source>
-                        <Image url="file:/C:/Users/Draden/Documents/GitHub/JavaInsane/Pentago/wood.jpg" />
+                        <Image url="file:wood.jpg" />
                      </source>
                   </ImageInput>
                </effect>
@@ -63,7 +63,7 @@
                <effect>
                   <ImageInput>
                      <source>
-                        <Image url="file:/C:/Users/Draden/Documents/GitHub/JavaInsane/Pentago/wood.jpg" />
+                        <Image url="file:wood.jpg" />
                      </source>
                   </ImageInput>
                </effect>
@@ -80,7 +80,7 @@
                <effect>
                   <ImageInput>
                      <source>
-                        <Image url="file:/C:/Users/Draden/Documents/GitHub/JavaInsane/Pentago/wood.jpg" />
+                        <Image url="file:wood.jpg" />
                      </source>
                   </ImageInput>
                </effect>
