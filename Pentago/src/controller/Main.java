@@ -18,6 +18,7 @@ public class Main extends Application {
 	private Stage primaryStage;
     private BorderPane rootLayout;
     private MenuViewController menuController;
+    public GameMode gameMode;
 
   public Main() throws IOException {
 
@@ -95,6 +96,8 @@ public class Main extends Application {
 /////////////////////////Afficher la vue PLatforme/////////////////////////
 	public void showPlat(){
     	try {
+            gameMode = GameMode.getInstance();
+            gameMode.getInstance().setNbJoueurs(2); // Provisoire
             // Load GUI overview.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("/view/PlateauView.fxml"));
