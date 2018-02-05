@@ -1,6 +1,8 @@
 package controller;
 
 
+import java.util.List;
+
 public class GameMode {
 
     private long startTime;
@@ -10,6 +12,8 @@ public class GameMode {
     public static GameMode instance;
 
     public int nbJoueurs;
+
+    public List<Joueur> joueurs;
 
     GameMode(){
         startTimer();
@@ -36,6 +40,10 @@ public class GameMode {
     public long getTotalTime(){
         return  (endTime - startTime);
     };
+
+    public List<Joueur> getJoueurs(){
+        return joueurs;
+    }
 
 
 }
