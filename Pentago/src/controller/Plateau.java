@@ -36,10 +36,49 @@ public class Plateau {
         return instance;
     }
 
+    public void initMegaTableau(){
+        int taille = (int) Math.sqrt(cellules.size());
+
+        megaTableau = new int[taille*3][taille*3];
+
+        for(int i = 0; i<cellules.size(); i++){
+            Cellule currentCellule = cellules.get(i);
+
+            int x = 0;
+            int y = 0;
+
+            int pos = i;
+            while (pos-taille >= 0){
+                pos = pos-taille;
+            }
+            x = pos*3;
+
+
+            if (i < taille){
+                y = 0;
+            }
+            else {
+                for (int j = 1; j<=taille; j++){
+                    if (i>=taille*j && i< taille*(j+1)){
+                        y=j*3;
+                        break;
+                    }
+                }
+            }
+
+            for (int iCell = 0; iCell < currentCellule.getCellule().length; iCell++){
+                for (int jCell =0; jCell < currentCellule.getCellule().length; jCell++){
+                    megaTableau[iCell+y][jCell+x] = currentCellule.getCellule()[iCell][jCell];
+                }
+            }
+
+        }
+    }
+
     public Collection<Joueur> checkWin(){
         HashSet<Joueur> gagnants = new HashSet<>();
 
-        //initMegaTableau()
+        initMegaTableau();
 
         for (int x=0; x<megaTableau.length; x++){
             for (int y=0; y<megaTableau.length; y++){
