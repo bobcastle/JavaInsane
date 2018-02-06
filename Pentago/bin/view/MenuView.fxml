@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="903.0" scaleShape="false" style="-fx-background-color: #555; -fx-border-color: #333; -fx-border-insets: 51px; -fx-border-radius: 10px; -fx-border-width: 10px; -fx-effect: dropshadow( three-pass-box, grey,15, 0.55, 0 , 0 );" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="903.0" scaleShape="false" style="-fx-background-color: #555; -fx-border-color: #333; -fx-border-insets: 51px; -fx-border-radius: 10px; -fx-border-width: 10px; -fx-effect: dropshadow( three-pass-box, black,15, 0.25, 0 , 0 );" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuViewController">
    <children>
       <BorderPane layoutY="91.0" prefHeight="458.0" prefWidth="888.0">
          <right>
