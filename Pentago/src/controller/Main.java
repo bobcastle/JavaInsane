@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 
 
 public class Main extends Application {
-
+	////on initialise notre vue de base/////////////
 	private Stage primaryStage;
     private BorderPane rootLayout;
     private MenuViewController menuController;
@@ -49,6 +49,7 @@ public class Main extends Application {
         initRootLayout();
 
     }
+
 //////////////////////////////////////////////GENERAL/////////////////////////////////////////////////////////
 /////////////////////////Afficher la base des vues/////////////////////////
 	public void initRootLayout() {
@@ -72,6 +73,7 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
+
 /////////////////////////Afficher la vue Menu/////////////////////////
 	public void showMainGUI(){
     	try {
@@ -96,6 +98,7 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
+
 /////////////////////////Afficher la vue PLatforme/////////////////////////
 	public void showPlat(){
     	try {
@@ -121,6 +124,7 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
+
 /////////////////////////Afficher la vue About/////////////////////////
 	public void showAbout(){
     	try {
@@ -166,7 +170,8 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
-/////////////////////////////Afficher vue choix nom/////////////////
+
+/////////////////////////////Afficher vue choix nom (pseudo)/////////////////
 	public void showChoixNom(){
     	try {
             // Load GUI overview.
@@ -188,7 +193,7 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
-///////////////////////////////Fonction Alerte////////////////////////
+///////////////////////////////Fonction Alerte pour éviter de répeter tout la structure de alerte////////////////////////
 	public void boxAlert(String titre, String text){
 		alert.setTitle(titre);
 		alert.setHeaderText(null);
@@ -202,14 +207,18 @@ public class Main extends Application {
 		// TODO Auto-generated method stub
 		this.joueur = nomJ1;
 	}
+
 	public void setJ2(String nomJ2) {
 		// TODO Auto-generated method stub
 		this.joueur2 = nomJ2;
 	}
+
 	public String getJ1() {
-	return joueur;
+		return joueur;
 	}
+
 	public String getJ2() {
 		return joueur2;
-		}
+	}
+
 	}

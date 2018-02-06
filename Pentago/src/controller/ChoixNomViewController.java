@@ -1,5 +1,8 @@
 package controller;
-
+/**
+ *@author Romtaro
+ *
+ */
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -30,10 +33,10 @@ public class ChoixNomViewController {
 		    main.showMainGUI();
 		});
 		TB1.textProperty().addListener((observable, oldValue, newValue) -> {
-			if (!newValue.matches("\\²[^A-Za-z0-9]")) {
+			if (!newValue.matches("\\²[^A-Za-z0-9]")) { // Seulement autorisé Alphanumérique.
                 TB1.setText(newValue.replaceAll("[^A-Za-z0-9]", ""));
             }
-			if(newValue.length()>12){
+			if(newValue.length()>12){ // max taille 12
 				TB1.setText(newValue.replace(newValue, oldValue));
 			}
     	});
@@ -50,12 +53,12 @@ public class ChoixNomViewController {
 	private void start() {
 		// TODO Auto-generated method stub
 		if(!TB1.getText().isEmpty() && !TB2.getText().isEmpty()){
-			if(TB1.getText().length()>3 && TB2.getText().length()>3){
-			main.setJ1(TB1.getText().toString());
+			if(TB1.getText().length()>3 && TB2.getText().length()>3){ // taille minimum 4
+			main.setJ1(TB1.getText().toString()); // on set les nom a la fonction qu'il les renvois ver la view Plateau
 			main.setJ2(TB2.getText().toString());
 			main.showPlat();
 			} else{
-				main.boxAlert("Attention","Veuillez rentrer au minimum 4 caractères");
+				main.boxAlert("Attention","Veuillez rentrer au minimum 4 caractères"); // Alert avec notre fonction BoxAlert
 			}
 		}
 		else{
