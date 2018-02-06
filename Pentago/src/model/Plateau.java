@@ -19,9 +19,9 @@ public class Plateau {
     private List<Cellule> cellules;
 
     Plateau(int nbJoueurs){
-        cellules = new ArrayList<Cellule>(nbJoueurs*nbJoueurs);
+        cellules = new ArrayList<Cellule>(nbJoueurs*nbJoueurs); // le nombre de cellules correspond au nombre de joueurs au carré
         for(int i=0; i<cellules.size(); i++){
-            cellules.add(new Cellule());
+            cellules.add(new Cellule()); // on rempli le tableau avec de nouvelles cellules
         }
     }
 
@@ -37,12 +37,12 @@ public class Plateau {
     }
 
     public void initMegaTableau(){
-        int taille = (int) Math.sqrt(cellules.size());
+        int taille = (int) Math.sqrt(cellules.size()); // nombre de cellules sur la longueur et hauteur
 
-        megaTableau = new int[taille*3][taille*3];
+        megaTableau = new int[taille*3][taille*3]; // les cellules sont composés de trois emplacement en longueur et hauteur
 
         for(int i = 0; i<cellules.size(); i++){
-            Cellule currentCellule = cellules.get(i);
+            Cellule currentCellule = cellules.get(i); // On copie la cellule que l'on traite
 
             int x = 0;
             int y = 0;
@@ -78,7 +78,7 @@ public class Plateau {
     public Collection<Joueur> checkWin(){
         HashSet<Joueur> gagnants = new HashSet<>();
 
-        initMegaTableau();
+        initMegaTableau(); // on initialise le mega tableau
 
         for (int x=0; x<megaTableau.length; x++){
             for (int y=0; y<megaTableau.length; y++){

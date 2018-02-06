@@ -10,12 +10,13 @@ public class Cellule {
 
     Cellule(){
         cellule = new int[3][3];
+        initCellule();
     }
 
     private void initCellule(){
         for (int i=0; i<cellule.length; i++){
             for(int j=0; j<cellule.length; i++){
-                cellule[i][j]=0;
+                cellule[i][j]=0; // on initialise toutes les valeurs a zero
             }
         }
     }
