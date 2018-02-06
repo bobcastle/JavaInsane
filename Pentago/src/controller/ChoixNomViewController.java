@@ -25,14 +25,14 @@ public class ChoixNomViewController {
 		    start();
 		});
 		TB1.textProperty().addListener((observable, oldValue, newValue) -> {
-			if (!newValue.matches("[^A-Za-z]")) {
-                TB1.setText(newValue.replaceAll("[^A-Za-z]", ""));
+			if (!newValue.matches("[^A-Za-z0-9]")) {
+                TB1.setText(newValue.replaceAll("[^A-Za-z0-9]", ""));
             }
     	});
 
 		TB2.textProperty().addListener((observable, oldValue, newValue) -> {
-			if (!newValue.matches("[^A-Za-z]")) {
-                TB2.setText(newValue.replaceAll("[^A-Za-z]", ""));
+			if (!newValue.matches("[^A-Za-z0-9]")) {
+                TB2.setText(newValue.replaceAll("[^A-Za-z0-9]", ""));
             }
     	});
 	}
