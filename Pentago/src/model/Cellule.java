@@ -1,7 +1,8 @@
 package model;
 
 /**
- * Created by benji on 31/01/2018.
+ *@author Created by benji on 31/01/2018.
+ *
  */
 public class Cellule {
 

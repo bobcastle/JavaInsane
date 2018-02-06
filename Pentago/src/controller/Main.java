@@ -5,6 +5,8 @@ import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -18,7 +20,9 @@ public class Main extends Application {
 	private Stage primaryStage;
     private BorderPane rootLayout;
     private MenuViewController menuController;
-
+    String joueur;
+    String joueur2;
+    Alert alert = new Alert(AlertType.INFORMATION);
   public Main() throws IOException {
 
     }
@@ -162,6 +166,50 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
+/////////////////////////////Afficher vue choix nom/////////////////
+	public void showChoixNom(){
+    	try {
+            // Load GUI overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("/view/ChoixNomView.fxml"));
 
 
+            AnchorPane mainGUI = (AnchorPane) loader.load();
+            // Set overview into the center of root layout.
+            rootLayout.setCenter(mainGUI);
+
+
+            ChoixNomViewController controller = loader.getController();
+            controller.setMain(this);
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+///////////////////////////////Fonction Alerte////////////////////////
+	public void boxAlert(String titre, String text){
+		alert.setTitle(titre);
+		alert.setHeaderText(null);
+		alert.setContentText(text);
+		alert.showAndWait();
+	}
+
+
+
+	public void setJ1(String nomJ1) {
+		// TODO Auto-generated method stub
+		this.joueur = nomJ1;
+	}
+	public void setJ2(String nomJ2) {
+		// TODO Auto-generated method stub
+		this.joueur2 = nomJ2;
+	}
+	public String getJ1() {
+	return joueur;
+	}
+	public String getJ2() {
+		return joueur2;
+		}
 	}

@@ -21,7 +21,7 @@ Button About;
 	private void initializeHandlers(){
 		//////Start Game go vu platforme////
 		BT1.setOnAction(actionEvent ->  {
-		    main.showPlat();
+		    main.showChoixNom();
 		});
 		////go vu regle///
 		Regle.setOnAction(actionEvent -> {

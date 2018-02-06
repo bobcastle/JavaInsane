@@ -31,12 +31,10 @@ public class PlateauViewController {
 		public void setMain(Main main) {
 			this.main = main;
 			this.gameMode = GameMode.getInstance();
+			this.joueur = new Joueur(main.getJ1(), 1);
+			this.joueur2 = new Joueur(main.getJ2(), 2);
             this.gameMode.getInstance().setNbJoueurs(2);
 			this.plateau = Plateau.getInstance();
-			this.joueur = new Joueur("Joueur 1 ", 1);
-			this.joueur2 = new Joueur("Joueur 2", 2);
-			gameMode.getJoueurs().add(joueur);
-			gameMode.getJoueurs().add(joueur2);
 			LabTime.setText(gameMode.getTotalTime()+"s");
 			LabScore.setText(joueur.getScore() + " - " + joueur2.getScore());
 			LabManche.setText("1");
