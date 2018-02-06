@@ -18,7 +18,10 @@ public class PlateauViewController {
 	Label LabManche;
 	@FXML
 	Label LabScore;
-
+	@FXML
+	Label LabJ1;
+	@FXML
+	Label LabJ2;
 
 		public void setMain(Main main) {
 			this.main = main;
@@ -30,8 +33,8 @@ public class PlateauViewController {
 			LabTime.setText(gameMode.getTotalTime()+"s");
 			LabScore.setText(joueur.getScore() + " - " + joueur2.getScore());
 			LabManche.setText("1");
-
-
+			LabJ1.setText("J1: "+ joueur.getName());
+			LabJ2.setText("J2: "+ joueur2.getName());
 		}
 		private void initializeHandlers(){
 			/////Retour menu///

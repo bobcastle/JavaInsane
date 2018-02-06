@@ -130,5 +130,19 @@
             </Pane>
          </children>
       </AnchorPane>
+      <AnchorPane layoutY="556.0" prefHeight="166.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="LabJ1" layoutY="42.0" prefHeight="43.0" prefWidth="256.0" textFill="#dddddd">
+               <font>
+                  <Font name="Onomber" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="LabJ2" layoutX="1.0" layoutY="99.0" prefHeight="43.0" prefWidth="256.0" textFill="#dddddd">
+               <font>
+                  <Font name="Onomber" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
