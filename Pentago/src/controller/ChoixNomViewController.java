@@ -25,6 +25,7 @@ public class ChoixNomViewController {
 		this.main = main;
 		initializeHandlers();
 	}
+
 	private void initializeHandlers(){
 		BT1.setOnAction(actionEvent ->  {
 		    start();
@@ -50,6 +51,7 @@ public class ChoixNomViewController {
 			}
     	});
 	}
+
 	private void start() {
 		// TODO Auto-generated method stub
 		if(!TB1.getText().isEmpty() && !TB2.getText().isEmpty()){
