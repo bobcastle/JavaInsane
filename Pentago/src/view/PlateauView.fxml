@@ -101,7 +101,7 @@
                         <Font name="Onomber" size="25.0" />
                      </font>
                   </Label>
-                  <Label layoutX="18.0" layoutY="1.0" prefHeight="37.0" prefWidth="96.0" text="Manche" textFill="#dddddd">
+                  <Label layoutX="18.0" layoutY="1.0" prefHeight="37.0" prefWidth="96.0" text="Tour" textFill="#dddddd">
                      <font>
                         <Font name="Onomber" size="24.0" />
                      </font>
