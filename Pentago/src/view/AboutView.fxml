@@ -35,8 +35,11 @@
                         <TextField editable="false" layoutX="335.0" layoutY="226.0" text="MALKASSIAN Benjamin" />
                         <ImageView fitHeight="126.0" fitWidth="236.0" layoutX="47.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../SharePoint/Extermination%20-%20Documents/Charte-Logo%20YNOV/Logo-Ynov-Aix-150px.png" />
+                              <Image url="@../../ynov.png" />
                            </image>
+                           <effect>
+                              <Bloom threshold="0.15" />
+                           </effect>
                         </ImageView>
                      </children></Pane>
                </children>
