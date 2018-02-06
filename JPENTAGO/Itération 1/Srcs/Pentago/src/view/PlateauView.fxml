@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="918.0" scaleShape="false" style="-fx-background-color: #444; -fx-effect: dropshadow( three-pass-box, black,15, 0.25, 0 , 0 );" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlateauViewController">
+   <children>
+      <Pane layoutX="-1.0" layoutY="1.0" prefHeight="724.0" prefWidth="918.0">
+         <effect>
+            <ImageInput />
+         </effect>
+      </Pane>
+      <Button fx:id="BTMenu" alignment="BOTTOM_RIGHT" blendMode="EXCLUSION" contentDisplay="RIGHT" layoutX="741.0" layoutY="648.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="128.0" style="-fx-effect: dropshadow( three-pass-box, black,15, 0.20, 0 , 0 ); -fx-background-color: #444;" text="ABANDONNER" textFill="WHITE" />
+      <Circle fill="#1b1b1a" layoutX="458.0" layoutY="372.0" radius="283.0" stroke="BLACK" strokeType="INSIDE" style="-fx-effect: dropshadow( three-pass-box, black,15, 0.20, 0 , 0 );" />
+      <AnchorPane layoutX="259.0" layoutY="170.0" prefHeight="403.0" prefWidth="401.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fa7f20b5" focusTraversable="true" height="200.0" layoutY="2.0" strokeType="INSIDE" width="200.0">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.49999999999999994" cycleMethod="REPEAT" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:wood.jpg" />
+                     </source>
+                  </ImageInput>
+               </effect>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fa7f20b5" height="200.0" layoutX="201.0" layoutY="2.0" strokeType="INSIDE" width="200.0">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.49999999999999994" cycleMethod="REPEAT" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:wood.jpg" />
+                     </source>
+                  </ImageInput>
+               </effect>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fa7f20b5" height="200.0" layoutY="202.0" strokeType="INSIDE" width="200.0">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.49999999999999994" cycleMethod="REPEAT" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:wood.jpg" />
+                     </source>
+                  </ImageInput>
+               </effect>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fa7f20b5" height="200.0" layoutX="200.0" layoutY="202.0" strokeType="INSIDE" width="200.0">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.49999999999999994" cycleMethod="REPEAT" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+               <effect>
+                  <ImageInput>
+                     <source>
+                        <Image url="file:wood.jpg" />
+                     </source>
+                  </ImageInput>
+               </effect>
+            </Rectangle>
+            <Button layoutX="5.0" layoutY="7.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="69.0" layoutY="7.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="135.0" layoutY="7.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="135.0" layoutY="71.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="69.0" layoutY="71.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="5.0" layoutY="71.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="5.0" layoutY="136.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="69.0" layoutY="136.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="135.0" layoutY="136.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="336.0" layoutY="137.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="270.0" layoutY="137.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="206.0" layoutY="137.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="206.0" layoutY="72.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="270.0" layoutY="72.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="336.0" layoutY="72.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="336.0" layoutY="8.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="270.0" layoutY="8.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="206.0" layoutY="8.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="135.0" layoutY="338.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="69.0" layoutY="338.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="5.0" layoutY="338.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="5.0" layoutY="273.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="69.0" layoutY="273.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="135.0" layoutY="273.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="135.0" layoutY="209.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="69.0" layoutY="209.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="5.0" layoutY="209.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="335.0" layoutY="338.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="269.0" layoutY="338.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="205.0" layoutY="338.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="205.0" layoutY="273.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="269.0" layoutY="273.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="335.0" layoutY="273.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="335.0" layoutY="209.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="269.0" layoutY="209.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+            <Button layoutX="205.0" layoutY="209.0" mnemonicParsing="false" opacity="0.9" prefHeight="56.0" prefWidth="57.0" style="-fx-border-width: 2px; -fx-border-color: grey; -fx-border-radius: 15px; -fx-background-color: black; -fx-background-radius: 15px;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="556.0" prefHeight="166.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="LabJ1" layoutY="42.0" prefHeight="43.0" prefWidth="256.0" textFill="#dddddd" translateX="15.0">
+               <font>
+                  <Font name="Onomber" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="LabJ2" layoutX="-5.0" layoutY="99.0" prefHeight="43.0" prefWidth="256.0" textFill="#dddddd" translateX="15.0">
+               <font>
+                  <Font name="Onomber" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1.0" layoutY="-1.0" prefHeight="96.0" prefWidth="216.0">
+         <children>
+            <Pane layoutX="14.0" layoutY="16.0" prefHeight="129.0" prefWidth="256.0" style="-fx-background-color: #333; -fx-background-radius: 15px; -fx-effect: dropshadow( three-pass-box, black,15, 0.20, 0 , 0 );">
+               <children>
+                  <Label layoutX="20.0" layoutY="33.0" prefHeight="43.0" prefWidth="85.0" text="Score" textFill="#dddddd">
+                     <font>
+                        <Font name="Onomber" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="1.0" prefHeight="37.0" prefWidth="96.0" text="Tour" textFill="#dddddd">
+                     <font>
+                        <Font name="Onomber" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="76.0" prefHeight="43.0" prefWidth="85.0" text="Time" textFill="#dddddd">
+                     <font>
+                        <Font name="Onomber" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabManche" layoutX="134.0" layoutY="1.0" prefHeight="37.0" prefWidth="96.0" textFill="#dddddd">
+                     <font>
+                        <Font name="Onomber" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabScore" layoutX="114.0" layoutY="36.0" prefHeight="37.0" prefWidth="135.0" textFill="#dddddd">
+                     <font>
+                        <Font name="Onomber" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabTime" layoutX="105.0" layoutY="79.0" prefHeight="37.0" prefWidth="200.0" textFill="#dddddd">
+                     <font>
+                        <Font name="Onomber" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="152.0" fitWidth="158.0" layoutX="704.0" layoutY="24.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:logo.png" />
+         </image>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" />
+         </effect>
+      </ImageView>
+   </children>
+</AnchorPane>
