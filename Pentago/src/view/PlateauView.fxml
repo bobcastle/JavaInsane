@@ -182,7 +182,7 @@
       </AnchorPane>
       <ImageView fitHeight="152.0" fitWidth="158.0" layoutX="704.0" layoutY="24.0" opacity="0.72" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../logo.png" />
+            <Image url="file:logo.png" />
          </image>
          <effect>
             <DropShadow blurType="GAUSSIAN" />

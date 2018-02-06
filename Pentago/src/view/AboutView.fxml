@@ -35,7 +35,7 @@
                         <TextField editable="false" layoutX="335.0" layoutY="226.0" text="MALKASSIAN Benjamin" />
                         <ImageView fitHeight="126.0" fitWidth="236.0" layoutX="42.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../ynov.png" />
+                              <Image url="file:ynov.png" />
                            </image>
                            <effect>
                               <Bloom threshold="0.15" />
@@ -46,7 +46,7 @@
                               <Bloom threshold="0.62" />
                            </effect>
                            <image>
-                              <Image url="@../../logo.png" />
+                              <Image url="file:logo.png" />
                            </image>
                         </ImageView>
                      </children></Pane>
