@@ -14,13 +14,38 @@
          <center>
             <AnchorPane prefHeight="662.0" prefWidth="839.0" BorderPane.alignment="CENTER">
                <children>
-                  <Pane layoutX="227.0" layoutY="110.0" prefHeight="413.0" prefWidth="468.0" style="-fx-background-color: #444; -fx-background-radius: 15px; -fx-effect: dropshadow( three-pass-box, black,15, 0.25, 0 , 0 );" />
-                  <Button fx:id="BT1" blendMode="EXCLUSION" layoutX="652.0" layoutY="130.0" mnemonicParsing="false" style="-fx-background-color: #444; -fx-background-radius: 10px;" text="X" textFill="WHITE" />
-                  <Label layoutX="355.0" layoutY="119.0" prefHeight="46.0" prefWidth="297.0" text="Presentation de l'equipe" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font name="Onomber" size="26.0" />
-                     </font>
-                  </Label>
+                  <Pane layoutX="60.0" layoutY="110.0" prefHeight="413.0" prefWidth="807.0" style="-fx-background-color: #444; -fx-background-radius: 15px; -fx-effect: droapshadow( three-pass-box, black,15, 0.25, 0 , 0 );">
+                     <children>
+                        <Button fx:id="BT1" blendMode="EXCLUSION" layoutX="769.0" layoutY="11.0" mnemonicParsing="false" style="-fx-background-color: #444; -fx-background-radius: 10px;" text="X" textFill="WHITE" />
+                        <Label layoutX="472.0" prefHeight="46.0" prefWidth="297.0" text="Presentation de l'equipe" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Onomber" size="26.0" />
+                           </font>
+                        </Label>
+                        <TextField alignment="CENTER" editable="false" layoutX="47.0" layoutY="185.0" prefHeight="27.0" prefWidth="152.0" text="ABDELOUAHED ROBEQUE Maxime">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </TextField>
+                        <TextField layoutX="246.0" layoutY="185.0" text="BOSCHET Basile" />
+                        <TextField layoutX="632.0" layoutY="185.0" text="LEBRUN Rodolphe" />
+                        <TextField layoutX="440.0" layoutY="185.0" text="COMBE Gabriel" />
+                        <TextField layoutX="442.0" layoutY="361.0" text="NATOURI Johann" />
+                        <TextField layoutX="248.0" layoutY="361.0" text="MONTGRANDI Romain" />
+                        <TextField editable="false" layoutX="49.0" layoutY="361.0" text="MALKASSIAN Benjamin" />
+                        <ImageView fitHeight="129.0" fitWidth="167.0" layoutX="614.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../SharePoint/Extermination%20-%20Documents/Charte-Logo%20YNOV/Logo-Ynov-Aix-150px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="153.0" layoutX="46.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="150.0" fitWidth="153.0" layoutX="244.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="150.0" fitWidth="153.0" layoutX="438.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="150.0" fitWidth="153.0" layoutX="630.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="150.0" fitWidth="153.0" layoutX="47.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="150.0" fitWidth="153.0" layoutX="244.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="150.0" fitWidth="153.0" layoutX="438.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></Pane>
                </children>
             </AnchorPane>
          </center>
