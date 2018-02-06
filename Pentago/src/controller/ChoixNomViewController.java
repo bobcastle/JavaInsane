@@ -25,7 +25,7 @@ public class ChoixNomViewController {
 		    start();
 		});
 		TB1.textProperty().addListener((observable, oldValue, newValue) -> {
-			if (!newValue.matches("[^A-Za-z0-9]")) {
+			if (!newValue.matches("\\²[^A-Za-z0-9]")) {
                 TB1.setText(newValue.replaceAll("[^A-Za-z0-9]", ""));
             }
 			if(newValue.length()>12){
@@ -34,7 +34,7 @@ public class ChoixNomViewController {
     	});
 
 		TB2.textProperty().addListener((observable, oldValue, newValue) -> {
-			if (!newValue.matches("[^A-Za-z0-9]")) {
+			if (!newValue.matches("\\²[^A-Za-z0-9]")) {
                 TB2.setText(newValue.replaceAll("[^A-Za-z0-9]", ""));
             }
 			if(newValue.length()>12){
@@ -45,10 +45,13 @@ public class ChoixNomViewController {
 	private void start() {
 		// TODO Auto-generated method stub
 		if(!TB1.getText().isEmpty() && !TB2.getText().isEmpty()){
-
+			if(TB1.getText().length()>3 && TB2.getText().length()>3){
 			main.setJ1(TB1.getText().toString());
 			main.setJ2(TB2.getText().toString());
 			main.showPlat();
+			} else{
+				main.boxAlert("Attention","Veuillez rentrer au minimum 4 caractères");
+			}
 		}
 		else{
 			main.boxAlert("Attention", "Veuillez renseigner les deux noms");
