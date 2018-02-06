@@ -33,13 +33,21 @@
                         <TextField editable="false" layoutX="335.0" layoutY="288.0" text="NATOURI Johann" />
                         <TextField editable="false" layoutX="335.0" layoutY="257.0" text="MONTGRANDI Romain" />
                         <TextField editable="false" layoutX="335.0" layoutY="226.0" text="MALKASSIAN Benjamin" />
-                        <ImageView fitHeight="126.0" fitWidth="236.0" layoutX="47.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="126.0" fitWidth="236.0" layoutX="42.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../ynov.png" />
                            </image>
                            <effect>
                               <Bloom threshold="0.15" />
                            </effect>
+                        </ImageView>
+                        <ImageView fitHeight="126.0" fitWidth="236.0" layoutX="97.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
+                           <effect>
+                              <Bloom threshold="0.62" />
+                           </effect>
+                           <image>
+                              <Image url="@../../logo.png" />
+                           </image>
                         </ImageView>
                      </children></Pane>
                </children>
