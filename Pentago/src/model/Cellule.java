@@ -12,6 +12,14 @@ public class Cellule {
         cellule = new int[3][3];
     }
 
+    private void initCellule(){
+        for (int i=0; i<cellule.length; i++){
+            for(int j=0; j<cellule.length; i++){
+                cellule[i][j]=0;
+            }
+        }
+    }
+
     public int[][] getCellule(){
         return cellule;
     }
