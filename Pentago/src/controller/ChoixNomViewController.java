@@ -15,6 +15,8 @@ public class ChoixNomViewController {
 	TextField TB2;
 	@FXML
 	Button BT1;
+	@FXML
+	Button BTMenu;
 
 	public void setMain(Main main) {
 		this.main = main;
@@ -23,6 +25,9 @@ public class ChoixNomViewController {
 	private void initializeHandlers(){
 		BT1.setOnAction(actionEvent ->  {
 		    start();
+		});
+		BTMenu.setOnAction(actionEvent ->  {
+		    main.showMainGUI();
 		});
 		TB1.textProperty().addListener((observable, oldValue, newValue) -> {
 			if (!newValue.matches("\\²[^A-Za-z0-9]")) {
