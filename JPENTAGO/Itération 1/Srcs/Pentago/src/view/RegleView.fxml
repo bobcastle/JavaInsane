@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="903.0" scaleShape="false" style="-fx-background-color: #777;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegleViewController">
+     <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="903.0" scaleShape="false">
+         <right>
+            <AnchorPane prefHeight="730.0" prefWidth="1051.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="116.0" layoutY="110.0" prefHeight="537.0" prefWidth="672.0" style="-fx-background-color: #444; -fx-background-radius: 15px; -fx-effect: dropshadow( three-pass-box, black,15, 0.25, 0 , 0 );">
+                     <children>
+                        <TextArea editable="false" layoutX="34.0" layoutY="64.0" prefHeight="450.0" prefWidth="608.0" style="-fx-border-radius: 4px;" text="Le jeu Jpentago+ est une version du Pentago avec quelques règles en plus.&#10;&#10;- Pentago &#10;Tout d’abord un rappel des règles du Pentago : &#10;Le jeu est joué sur un tablier 6x6, divisé en quatre tabliers secondaires 3x3.&#10;A chaque tour, chaque joueur place une bille de sa couleur sur un espace inoccupé sur le tablier, et puis tourne un des tabliers secondaires de 90 degrés dans le sens qu’il souhaite. Un joueur gagne en obtenant cinq de ses billes dans une rangée verticale, horizontale ou diagonale (avant ou après rotation du tablier). Si chacun des 36 espaces est occupé sans qu’aucune rangée de cinq billes ne soit formée, alors la partie est nulle. Chaque joueur commence donc avec 18 billes.&#10;&#10;- Jpentago+&#10;Ainsi notre jeu Jpentago+ sera une version numérique améliorer de celui-ci. En effet, les règles sont adaptives au nombre de joueurs. On pourra donc aller jusqu’à 6 participants en ajoutant des grilles. En augmentant la taille du tablier principal.&#10;La formule de la taille du plateau est « nombredejoueur*3) x (nombredejoueur*3) ». C’est-à-dire que s’il y a 3 joueurs le plateau est 9x9, s’il y a 4 joueur le plateau est 12x12 etc..&#10;De plus, le nombre de billes données aux joueurs sont elles aussi adaptives, chaque joueur reçoit nombredejoueur*9 billes.&#10;Enfin étant une version numérique du jeu, celui-ci permettra de jouer contre une IA afin de pouvoir jouer tout seul." wrapText="true">
+                           <font>
+                              <Font name="Arial Narrow" size="16.0" />
+                           </font>
+                        </TextArea>
+                        <Button fx:id="BT1" blendMode="EXCLUSION" layoutX="640.0" layoutY="17.0" mnemonicParsing="false" style="-fx-background-color: #444; -fx-background-radius: 10px;" text="X" textFill="WHITE" />
+                        <Label layoutX="457.0" layoutY="6.0" prefHeight="46.0" prefWidth="183.0" text="Regles Du Jeu" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Onomber" size="26.0" />
+                           </font>
+                        </Label>
+                     </children></Pane>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
