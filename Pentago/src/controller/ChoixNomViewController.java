@@ -28,12 +28,18 @@ public class ChoixNomViewController {
 			if (!newValue.matches("[^A-Za-z0-9]")) {
                 TB1.setText(newValue.replaceAll("[^A-Za-z0-9]", ""));
             }
+			if(newValue.length()>12){
+				TB1.setText(newValue.replace(newValue, oldValue));
+			}
     	});
 
 		TB2.textProperty().addListener((observable, oldValue, newValue) -> {
 			if (!newValue.matches("[^A-Za-z0-9]")) {
                 TB2.setText(newValue.replaceAll("[^A-Za-z0-9]", ""));
             }
+			if(newValue.length()>12){
+				TB2.setText(newValue.replace(newValue, oldValue));
+			}
     	});
 	}
 	private void start() {
