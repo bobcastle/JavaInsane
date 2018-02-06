@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="918.0" scaleShape="false" style="-fx-background-color: #444;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlateauViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="918.0" scaleShape="false" style="-fx-background-color: #444; -fx-effect: dropshadow( three-pass-box, grey,15, 0.55, 0 , 0 );" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlateauViewController">
    <children>
       <Pane layoutX="-1.0" layoutY="1.0" prefHeight="724.0" prefWidth="918.0">
          <effect>
