@@ -34,7 +34,7 @@ public class GameMode {
     }
 
     public void startTimer(){
-        startTime = System.nanoTime();
+        startTime = System.currentTimeMillis();
     }
 
     public long getTotalTime(){

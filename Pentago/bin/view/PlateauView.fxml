@@ -94,7 +94,7 @@
       </AnchorPane>
       <AnchorPane layoutX="7.0" layoutY="2.0" prefHeight="96.0" prefWidth="216.0">
          <children>
-            <Pane layoutX="14.0" layoutY="16.0" prefHeight="80.0" prefWidth="228.0" style="-fx-background-color: #333; -fx-background-radius: 15px; -fx-effect: dropshadow( three-pass-box, black,15, 0.20, 0 , 0 );">
+            <Pane layoutX="14.0" layoutY="16.0" prefHeight="129.0" prefWidth="256.0" style="-fx-background-color: #333; -fx-background-radius: 15px; -fx-effect: dropshadow( three-pass-box, black,15, 0.20, 0 , 0 );">
                <children>
                   <Label layoutX="20.0" layoutY="33.0" prefHeight="43.0" prefWidth="85.0" text="Score" textFill="#dddddd">
                      <font>
@@ -102,6 +102,26 @@
                      </font>
                   </Label>
                   <Label layoutX="18.0" layoutY="1.0" prefHeight="37.0" prefWidth="96.0" text="Manche" textFill="#dddddd">
+                     <font>
+                        <Font name="Onomber" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="76.0" prefHeight="43.0" prefWidth="85.0" text="Time" textFill="#dddddd">
+                     <font>
+                        <Font name="Onomber" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabManche" layoutX="134.0" layoutY="1.0" prefHeight="37.0" prefWidth="96.0" textFill="#dddddd">
+                     <font>
+                        <Font name="Onomber" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabScore" layoutX="114.0" layoutY="36.0" prefHeight="37.0" prefWidth="135.0" textFill="#dddddd">
+                     <font>
+                        <Font name="Onomber" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabTime" layoutX="105.0" layoutY="79.0" prefHeight="37.0" prefWidth="200.0" textFill="#dddddd">
                      <font>
                         <Font name="Onomber" size="24.0" />
                      </font>
