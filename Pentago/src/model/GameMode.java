@@ -1,7 +1,12 @@
-package controller;
+package model;
 
 
+import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
+
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 
 public class GameMode {
 
@@ -17,6 +22,7 @@ public class GameMode {
 
     GameMode(){
         startTimer();
+        joueurs = new ArrayList<Joueur>();
     }
 
     public static GameMode getInstance(){
@@ -34,7 +40,9 @@ public class GameMode {
     }
 
     public void startTimer(){
-        startTime = System.currentTimeMillis();
+    	  startTime = System.currentTimeMillis();
+
+
     }
 
     public long getTotalTime(){
