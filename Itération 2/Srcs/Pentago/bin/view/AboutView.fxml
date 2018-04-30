@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane scaleShape="false" style="-fx-background-color: #777;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AboutViewController">
+   <children>
+      <BorderPane layoutX="-13.0" prefHeight="619.0" prefWidth="895.0">
+         <center>
+            <AnchorPane prefHeight="662.0" prefWidth="839.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="227.0" layoutY="110.0" prefHeight="413.0" prefWidth="468.0" style="-fx-background-color: #444; -fx-background-radius: 15px;" />
+                  <Button fx:id="BT1" blendMode="EXCLUSION" layoutX="652.0" layoutY="130.0" mnemonicParsing="false" style="-fx-background-color: #444; -fx-background-radius: 10px;" text="X" textFill="WHITE" />
+                  <Label layoutX="355.0" layoutY="119.0" prefHeight="46.0" prefWidth="297.0" text="Presentation de l'equipe" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Onomber" size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
