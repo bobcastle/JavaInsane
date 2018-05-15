@@ -226,11 +226,12 @@ while(plateau.checkWin() == null){
 		}
 		private void placeCellule(int joueur, int i){
 			System.out.println("ok "+ joueur + " "+ i);
+			System.out.println("Size : " + this.plateau.cellules.size());
 			//System.out.println("dddd " +plateau.getCellule(0).toString());
 			//System.out.println("dddd " +plateau.getInstance().getCellule(0).cellule[0][0]);
 			if( i<=8){
 				/// les CELLULE NE FOCNTIONNE PAS
-		/*		switch (i)
+				switch (i)
 				{
 				case 0:
 					plateau.getCellule(0).getCellule()[0][0] = joueur;
@@ -252,7 +253,7 @@ while(plateau.checkWin() == null){
 				case 8:
 					plateau.getCellule(0).cellule[2][2] = joueur;
 				break;
-			}*/
+			}
 
 			}else {
 

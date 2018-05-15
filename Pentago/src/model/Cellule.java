@@ -16,7 +16,7 @@ public class Cellule {
 
     private void initCellule(){
         for (int i=0; i<cellule.length; i++){
-            for(int j=0; j<cellule.length; i++){
+            for(int j=0; j<cellule.length; j++){
                 cellule[i][j]=0; // on initialise toutes les valeurs a zero
             }
         }

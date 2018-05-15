@@ -16,11 +16,11 @@ public class Plateau {
 
     private int[][] megaTableau;
 
-    private List<Cellule> cellules;
+    public List<Cellule> cellules;
 
     Plateau(int nbJoueurs){
         cellules = new ArrayList<Cellule>(nbJoueurs*nbJoueurs); // le nombre de cellules correspond au nombre de joueurs au carré
-        for(int i=0; i<cellules.size(); i++){
+        for(int i=0; i<nbJoueurs*nbJoueurs; i++){
             cellules.add(new Cellule()); // on rempli le tableau avec de nouvelles cellules
         }
     }
