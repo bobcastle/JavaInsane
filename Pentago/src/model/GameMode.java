@@ -8,16 +8,16 @@ import java.util.List;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 
-public class GameMode {
+public class GameMode extends Thread{
 
     private long startTime;
 
-    private long endTime;
+    private long endTime=0;
 
     public static GameMode instance;
 
     public int nbJoueurs;
-
+    public long time = 0;
     public List<Joueur> joueurs;
 
     GameMode(){
@@ -43,8 +43,16 @@ public class GameMode {
     	  this.startTime = System.currentTimeMillis();
 
     }
+    public void run(){
+
+    		long t = System.currentTimeMillis();
+    		long u =t - this.startTime;
+    		this.time =u;
+    		System.out.println(getTotalTime()+" seconde");
+
+    }
     public long getTotalTime(){
-        return  (this.endTime-this.startTime);
+        return  this.time/1000;
     };
 
     public List<Joueur> getJoueurs(){

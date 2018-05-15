@@ -8,6 +8,7 @@ import javafx.collections.ObservableList;
  *
  */
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -153,9 +154,14 @@ public class PlateauViewController {
 			LabJ2.setText("J2: "+ joueur2.getName());
 			setTourEnCour(this.joueur);
 			LabTour.setText("Au tour de : "+getTourEnCour().getName());
-			History.setStyle("-fx-background-color: #42AFA0;");
+			History.setStyle("background-color: #42AFA0;");
 			History.setEditable(false);
+			/* while(plateau.checkWin()!=this.joueur ||plateau.checkWin()!=joueur2 ){
+					gameMode.run();
+					LabTime.setText(""+gameMode.getTotalTime());
+				}*/
 			initializeHandlers();
+
 
 		}
 		private void initializeHandlers(){
@@ -211,7 +217,8 @@ while(plateau.checkWin() == null){
 			}
 		}
 		private void SelectButton(Joueur joueur, Button bt){
-			System.out.println("win : " + plateau.checkWin().getClass().getName());
+
+			System.out.println("win : " + plateau.checkWin());
 			if(joueur == this.joueur){
 				//System.out.println(LabTour.getText());
 				bt.setStyle("-fx-background-color: #dc143c;");
@@ -219,8 +226,11 @@ while(plateau.checkWin() == null){
 				placeCellule(joueur, 1,listButton.indexOf(bt));
 				setTourEnCour(this.joueur2);
 				LabTour.setText("Au tour de : " + getTourEnCour().getName());
+
 				//System.out.println(plateau.getCellule(0).cellule[1][1]);
+
 				this.joueurPlayOk = true;
+
 				}else if(joueur == this.joueur2){
 				bt.setStyle("-fx-background-color: #1e90ff;");
 				bt.setDisable(true);
@@ -232,10 +242,12 @@ while(plateau.checkWin() == null){
 
 				}
 		}
+
 		public void history(Joueur joueur, int plat , int cell ,int cell2){
 			plat +=1;
 			this.History.setText(this.History.getText() + "\n"+ joueur.getName() + " joue plateau : "+plat+ ", Cellule ["+cell+"]"+"["+cell2+"]" );
 		}
+
 		private void placeCellule(Joueur joueurs, int joueur, int i){
 			System.out.println("ok "+ joueur + " "+ i);
 			System.out.println("Size : " + this.plateau.cellules.size());
@@ -412,7 +424,60 @@ while(plateau.checkWin() == null){
 			}
 		}
 		public void Turn(){
+		/*
+		cellule[0][0] = cloneCellule[0][2];
+	        cellule[0][1] = cloneCellule[1][2];
+	        cellule[0][2] = cloneCellule[2][2];
+	        cellule[1][0] = cloneCellule[0][1];
+	        cellule[1][2] = cloneCellule[2][1];
+	        cellule[2][0] = cloneCellule[0][0];
+	        cellule[2][1] = cloneCellule[1][0];
+	        cellule[2][2] = cloneCellule[2][0];
+	        0=2
+	        1=5
+	        2=8
+	        3=1
+	        4=4
+	        5=7
+	        6=0
+	        7=3
+	        8=6
 
+	        Button bt00 = listButton.get(0);
+	        Button bt01 = listButton.get(1);*/
+			//fonction changer button droite plateau 0
+	        int j =2;
+
+
+	        for(int i =0; i<8 ; i++){
+
+	        	double x = listButton.get(j).getLayoutX();
+				double y = listButton.get(j).getLayoutY();
+				listButton.get(i).setLayoutX(x);
+				listButton.get(i).setLayoutY(y);
+				j +=3;
+				if(j >= 10){
+
+					j =- 10;
+
+				}else{
+
+				}
+
+	        }
+			double x = BT01.getLayoutX();
+			double y = BT01.getLayoutY();
+			//System.out.println("BT00.alignmentProperty().getValue() "+ BT00.alignmentProperty().getValue());
+			BT01.setLayoutX(BT00.getLayoutX());
+			BT01.setLayoutY(BT00.getLayoutY());
+			BT00.setLayoutX(x);
+			BT00.setLayoutY(y);
+			Button t = listButton.get(1);
+			listButton.set(1, BT00);
+			listButton.set(0, t);
+			//BT00 = stock;
+			//BT00.setStyle(stock);
 
 		}
+
 }
