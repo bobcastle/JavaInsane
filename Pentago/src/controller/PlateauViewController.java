@@ -1,4 +1,6 @@
 package controller;
+
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 /**
@@ -8,6 +10,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import model.GameMode;
 import model.Plateau;
 import model.Joueur;
@@ -25,6 +28,8 @@ public class PlateauViewController {
 	private boolean joueurPlayOk = false;
 	private boolean joueur2PlayOk = false;
 
+	@FXML
+	TextArea History;
 	@FXML
 	Button BTMenu;
 	//Button du plateau///
@@ -136,9 +141,11 @@ public class PlateauViewController {
 			this.joueur2 = new Joueur(main.getJ2(), 2);
 
             this.gameMode.setNbJoueurs(2);
-
+            this.gameMode.addJoueur(joueur);
+            this.gameMode.addJoueur(joueur2);
 
 			this.plateau = Plateau.getInstance();
+
 			LabTime.setText(this.gameMode.getTotalTime()+"s"); // on récupére le time
 			LabScore.setText(joueur.getScore() + " - " + joueur2.getScore()); // on récupére le score des joueur
 			LabManche.setText(""+this.tour);
@@ -146,7 +153,8 @@ public class PlateauViewController {
 			LabJ2.setText("J2: "+ joueur2.getName());
 			setTourEnCour(this.joueur);
 			LabTour.setText("Au tour de : "+getTourEnCour().getName());
-
+			History.setStyle("-fx-background-color: #42AFA0;");
+			History.setEditable(false);
 			initializeHandlers();
 
 		}
@@ -203,12 +211,12 @@ while(plateau.checkWin() == null){
 			}
 		}
 		private void SelectButton(Joueur joueur, Button bt){
+			System.out.println("win : " + plateau.checkWin().getClass().getName());
 			if(joueur == this.joueur){
 				//System.out.println(LabTour.getText());
 				bt.setStyle("-fx-background-color: #dc143c;");
 				bt.setDisable(true);
-
-				placeCellule(1,listButton.indexOf(bt));
+				placeCellule(joueur, 1,listButton.indexOf(bt));
 				setTourEnCour(this.joueur2);
 				LabTour.setText("Au tour de : " + getTourEnCour().getName());
 				//System.out.println(plateau.getCellule(0).cellule[1][1]);
@@ -217,46 +225,194 @@ while(plateau.checkWin() == null){
 				bt.setStyle("-fx-background-color: #1e90ff;");
 				bt.setDisable(true);
 				this.joueur2PlayOk = true;
-				placeCellule(2,listButton.indexOf(bt));
+				placeCellule(joueur, 2,listButton.indexOf(bt));
 				checkTour();
 				setTourEnCour(this.joueur);
 				LabTour.setText("Au tour de : " +getTourEnCour().getName());
 
 				}
 		}
-		private void placeCellule(int joueur, int i){
+		public void history(Joueur joueur, int plat , int cell ,int cell2){
+			plat +=1;
+			this.History.setText(this.History.getText() + "\n"+ joueur.getName() + " joue plateau : "+plat+ ", Cellule ["+cell+"]"+"["+cell2+"]" );
+		}
+		private void placeCellule(Joueur joueurs, int joueur, int i){
 			System.out.println("ok "+ joueur + " "+ i);
 			System.out.println("Size : " + this.plateau.cellules.size());
 			//System.out.println("dddd " +plateau.getCellule(0).toString());
 			//System.out.println("dddd " +plateau.getInstance().getCellule(0).cellule[0][0]);
 			if( i<=8){
-				/// les CELLULE NE FOCNTIONNE PAS
+				System.out.println(i);
 				switch (i)
 				{
 				case 0:
 					plateau.getCellule(0).getCellule()[0][0] = joueur;
-					//System.out.println("dddd " +plateau.getCellule(0).getCellule()[0][0]);
+					System.out.println("dddd " +plateau.getCellule(0).getCellule()[0][0]);
+					history(joueurs,0,0,0);
+					return;
 				case 1:
 					plateau.getCellule(0).cellule[0][1] = joueur;
+					history(joueurs,0,0,1);
+					return;
 				case 2:
 					plateau.getCellule(0).cellule[0][2] = joueur;
+					history(joueurs,0,0,2);
+					return;
 				case 3:
 					plateau.getCellule(0).cellule[1][0] = joueur;
+					history(joueurs,0,1,0);
+					return;
 				case 4:
 					plateau.getCellule(0).cellule[1][1] = joueur;
+					history(joueurs,0,1,1);
+					return;
 				case 5:
 					plateau.getCellule(0).cellule[1][2] = joueur;
+					history(joueurs,0,1,2);
+					return;
 				case 6:
 					plateau.getCellule(0).cellule[2][0] = joueur;
+					history(joueurs,0,2,0);
+					return;
 				case 7:
 					plateau.getCellule(0).cellule[2][1] = joueur;
+					history(joueurs,0,2,1);
+					return;
 				case 8:
 					plateau.getCellule(0).cellule[2][2] = joueur;
+					history(joueurs,0,2,2);
+					break;
+
+			}
+
+			}else if( i>8 && i<=17){
+				switch (i)
+				{
+				case 9:
+					plateau.getCellule(1).getCellule()[0][0] = joueur;
+					history(joueurs,1,0,0);
+					return;
+				case 10:
+					plateau.getCellule(1).cellule[0][1] = joueur;
+					history(joueurs,1,0,1);
+					return;
+				case 11:
+					plateau.getCellule(1).cellule[0][2] = joueur;
+					history(joueurs,1,0,2);
+					return;
+				case 12:
+					plateau.getCellule(1).cellule[1][0] = joueur;
+					history(joueurs,1,1,0);
+					return;
+				case 13:
+					plateau.getCellule(1).cellule[1][1] = joueur;
+					history(joueurs,1,1,1);
+					return;
+				case 14:
+					plateau.getCellule(1).cellule[1][2] = joueur;
+					history(joueurs,1,1,2);
+					return;
+				case 15:
+					plateau.getCellule(1).cellule[2][0] = joueur;
+					history(joueurs,1,2,0);
+					return;
+				case 16:
+					plateau.getCellule(1).cellule[2][1] = joueur;
+					history(joueurs,1,2,1);
+					return;
+				case 17:
+					plateau.getCellule(1).cellule[2][2] = joueur;
+					history(joueurs,1,2,2);
 				break;
 			}
 
-			}else {
+			}else if(i>17 && i<=26){
+				switch (i)
+				{
+				case 18:
+					plateau.getCellule(2).getCellule()[0][0] = joueur;
+					history(joueurs,2,0,0);
+					return;
+				case 19:
+					plateau.getCellule(2).cellule[0][1] = joueur;
+					history(joueurs,2,0,1);
+					return;
+				case 20:
+					plateau.getCellule(2).cellule[0][2] = joueur;
+					history(joueurs,2,0,2);
+					return;
+				case 21:
+					plateau.getCellule(2).cellule[1][0] = joueur;
+					history(joueurs,2,1,0);
+					return;
+				case 22:
+					plateau.getCellule(2).cellule[1][1] = joueur;
+					history(joueurs,2,1,1);
+					return;
+				case 23:
+					plateau.getCellule(2).cellule[1][2] = joueur;
+					history(joueurs,2,1,2);
+					return;
+				case 24:
+					plateau.getCellule(2).cellule[2][0] = joueur;
+					history(joueurs,2,2,0);
+					return;
+				case 25:
+					plateau.getCellule(2).cellule[2][1] = joueur;
+					history(joueurs,2,2,1);
+					return;
+				case 26:
+					plateau.getCellule(2).cellule[2][2] = joueur;
+					history(joueurs,2,2,2);
 
+				break;
 			}
+			}else if(i>26 && i<=35){
+				switch (i)
+				{
+				case 27:
+					plateau.getCellule(3).getCellule()[0][0] = joueur;
+					history(joueurs,3,0,0);
+					return;
+				case 28:
+					plateau.getCellule(3).cellule[0][1] = joueur;
+					history(joueurs,3,0,1);
+					return;
+				case 29:
+					plateau.getCellule(3).cellule[0][2] = joueur;
+					history(joueurs,3,0,2);
+					return;
+				case 30:
+					plateau.getCellule(3).cellule[1][0] = joueur;
+					history(joueurs,3,1,0);
+					return;
+				case 31:
+					plateau.getCellule(3).cellule[1][1] = joueur;
+					history(joueurs,3,1,1);
+					return;
+				case 32:
+					plateau.getCellule(3).cellule[1][2] = joueur;
+					history(joueurs,3,1,2);
+					return;
+				case 33:
+					plateau.getCellule(3).cellule[2][0] = joueur;
+					history(joueurs,3,2,0);
+					return;
+				case 34:
+					plateau.getCellule(3).cellule[2][1] = joueur;
+					history(joueurs,3,2,1);
+					return;
+				case 35:
+					plateau.getCellule(3).cellule[2][2] = joueur;
+					history(joueurs,3,2,2);
+				break;
+			}
+			}else {
+				System.out.println("Error");
+			}
+		}
+		public void Turn(){
+
+
 		}
 }

@@ -51,5 +51,7 @@ public class GameMode {
         return joueurs;
     }
 
-
+    public void addJoueur(Joueur joueur){
+    	this.joueurs.add(joueur);
+    }
 }

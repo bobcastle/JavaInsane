@@ -122,7 +122,7 @@ public class Plateau {
             }
         }
         if (victoire == true){
-            return GameMode.getInstance().getJoueurs().get(currentVar);
+            return GameMode.getInstance().getJoueurs().get(currentVar-1);
         }
         return null;
     }
@@ -136,7 +136,7 @@ public class Plateau {
             }
         }
         if (victoire == true){
-            return GameMode.getInstance().getJoueurs().get(currentVar);
+            return GameMode.getInstance().getJoueurs().get(currentVar-1);
         }
         return null;
     }
@@ -150,7 +150,7 @@ public class Plateau {
             }
         }
         if (victoire == true){
-            return GameMode.getInstance().getJoueurs().get(currentVar);
+            return GameMode.getInstance().getJoueurs().get(currentVar-1);
         }
         return null;
     }

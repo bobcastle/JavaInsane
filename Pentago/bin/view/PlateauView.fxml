@@ -197,5 +197,15 @@
             <DropShadow blurType="GAUSSIAN" />
          </effect>
       </ImageView>
+      <AnchorPane layoutX="614.0" layoutY="176.0" prefHeight="414.0" prefWidth="224.0" translateX="75.0">
+         <children>
+            <TextArea fx:id="History" layoutY="22.0" prefHeight="388.0" prefWidth="226.0" />
+            <Label alignment="CENTER" layoutX="33.0" prefHeight="17.0" prefWidth="135.0" text="History" textFill="#d14413">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
