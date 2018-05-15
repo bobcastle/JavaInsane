@@ -6,11 +6,12 @@ package model;
  */
 public class Cellule {
 
-    int[][] cellule;
+    public int[][] cellule;
 
-    Cellule(){
-        cellule = new int[3][3];
+    public Cellule(){
+        this.cellule = new int[3][3];
         initCellule();
+
     }
 
     private void initCellule(){
@@ -22,11 +23,11 @@ public class Cellule {
     }
 
     public int[][] getCellule(){
-        return cellule;
+        return this.cellule;
     }
 
     public void turnLeft(){
-        int[][] cloneCellule = cellule;
+        int[][] cloneCellule = this.cellule;
         cellule[0][0] = cloneCellule[0][2];
         cellule[0][1] = cloneCellule[1][2];
         cellule[0][2] = cloneCellule[2][2];

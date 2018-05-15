@@ -21,7 +21,9 @@ public class PlateauViewController {
 	public static Joueur joueur2;
 	private Joueur tourEnCour;
 	public ObservableList<Button> listButton = FXCollections.observableArrayList();;
-	Cellule cellule;
+	private int tour = 1;
+	private boolean joueurPlayOk = false;
+	private boolean joueur2PlayOk = false;
 
 	@FXML
 	Button BTMenu;
@@ -134,15 +136,17 @@ public class PlateauViewController {
 			this.joueur2 = new Joueur(main.getJ2(), 2);
 
             this.gameMode.setNbJoueurs(2);
-           //
+
+
 			this.plateau = Plateau.getInstance();
-			LabTime.setText(gameMode.getTotalTime()+"s"); // on récupére le time
+			LabTime.setText(this.gameMode.getTotalTime()+"s"); // on récupére le time
 			LabScore.setText(joueur.getScore() + " - " + joueur2.getScore()); // on récupére le score des joueur
-			LabManche.setText("1");
+			LabManche.setText(""+this.tour);
 			LabJ1.setText("J1: "+ joueur.getName()); // on affiche nom joueur
 			LabJ2.setText("J2: "+ joueur2.getName());
 			setTourEnCour(this.joueur);
 			LabTour.setText("Au tour de : "+getTourEnCour().getName());
+
 			initializeHandlers();
 
 		}
@@ -150,15 +154,21 @@ public class PlateauViewController {
 			/////Retour menu en ajoutant une action à notre boutton///
 
 			BTMenu.setOnAction(actionEvent ->  {
-			    main.showMainGUI();
+				main.showMainGUI();
+
 			});
 
 
 
 			 for(int i=0;i< listButton.size(); i++){
+
 				 Button button = listButton.get(i);
+
 				 button.setOnAction(actionEvent ->  {
+
 						SelectButton(getTourEnCour(), button);
+						LabTime.setText(this.gameMode.getTotalTime()+"s");
+
 					});
 				    }
 
@@ -180,18 +190,72 @@ while(plateau.checkWin() == null){
 		public void setTourEnCour(Joueur tourEnCour) {
 			this.tourEnCour = tourEnCour;
 		}
+
+		public void checkTour(){
+			if(this.joueurPlayOk == true && this.joueur2PlayOk == true){
+			this.tour++;
+			this.LabManche.setText(""+this.tour);
+			this.joueurPlayOk = false;
+			this.joueur2PlayOk = false;
+
+			}else{
+
+			}
+		}
 		private void SelectButton(Joueur joueur, Button bt){
 			if(joueur == this.joueur){
 				//System.out.println(LabTour.getText());
 				bt.setStyle("-fx-background-color: #dc143c;");
 				bt.setDisable(true);
+
+				placeCellule(1,listButton.indexOf(bt));
 				setTourEnCour(this.joueur2);
 				LabTour.setText("Au tour de : " + getTourEnCour().getName());
+				//System.out.println(plateau.getCellule(0).cellule[1][1]);
+				this.joueurPlayOk = true;
 				}else if(joueur == this.joueur2){
 				bt.setStyle("-fx-background-color: #1e90ff;");
 				bt.setDisable(true);
+				this.joueur2PlayOk = true;
+				placeCellule(2,listButton.indexOf(bt));
+				checkTour();
 				setTourEnCour(this.joueur);
 				LabTour.setText("Au tour de : " +getTourEnCour().getName());
+
 				}
+		}
+		private void placeCellule(int joueur, int i){
+			System.out.println("ok "+ joueur + " "+ i);
+			//System.out.println("dddd " +plateau.getCellule(0).toString());
+			//System.out.println("dddd " +plateau.getInstance().getCellule(0).cellule[0][0]);
+			if( i<=8){
+				/// les CELLULE NE FOCNTIONNE PAS
+		/*		switch (i)
+				{
+				case 0:
+					plateau.getCellule(0).getCellule()[0][0] = joueur;
+					//System.out.println("dddd " +plateau.getCellule(0).getCellule()[0][0]);
+				case 1:
+					plateau.getCellule(0).cellule[0][1] = joueur;
+				case 2:
+					plateau.getCellule(0).cellule[0][2] = joueur;
+				case 3:
+					plateau.getCellule(0).cellule[1][0] = joueur;
+				case 4:
+					plateau.getCellule(0).cellule[1][1] = joueur;
+				case 5:
+					plateau.getCellule(0).cellule[1][2] = joueur;
+				case 6:
+					plateau.getCellule(0).cellule[2][0] = joueur;
+				case 7:
+					plateau.getCellule(0).cellule[2][1] = joueur;
+				case 8:
+					plateau.getCellule(0).cellule[2][2] = joueur;
+				break;
+			}*/
+
+			}else {
+
+			}
 		}
 }

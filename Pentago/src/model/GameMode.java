@@ -40,13 +40,11 @@ public class GameMode {
     }
 
     public void startTimer(){
-    	  startTime = System.currentTimeMillis();
-
+    	  this.startTime = System.currentTimeMillis();
 
     }
-
     public long getTotalTime(){
-        return  (endTime - startTime);
+        return  (this.endTime-this.startTime);
     };
 
     public List<Joueur> getJoueurs(){

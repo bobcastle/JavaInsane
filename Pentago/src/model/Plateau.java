@@ -26,7 +26,8 @@ public class Plateau {
     }
 
     public Cellule getCellule(int index){
-        return cellules.get(index);
+    	//System.out.println("ok"+ this.cellules.size());
+        return this.cellules.get(index);
     }
 
     public static Plateau getInstance(){
